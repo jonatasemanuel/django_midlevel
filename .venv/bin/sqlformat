@@ -1,4 +1,4 @@
-#!/home/joearch/projects/django_midlevel/.venv/bin/python
+#!/home/jobmach/Documents/Projects/django_midlevel/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
