@@ -10,15 +10,15 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
-import dj_database_url
 from pathlib import Path
-import django_heroku
+from django_on_heroku import dj_database_url
+import django_on_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
 # Usando PostgreesSQL com Heroku
 DATABASES = {
         'default': dj_database_url.config()
@@ -30,8 +30,8 @@ DATABASES = {
 SECRET_KEY = 'django-insecure-60h_(lh=ufciu@u1cg%c^-*%lj0r)540(cu9ys^bln94kz5-@h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['djangomid-je.herokuapp.com/']
+DEBUG = False 
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
